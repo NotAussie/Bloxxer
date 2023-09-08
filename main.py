@@ -10,9 +10,7 @@ import asyncio
 import itertools
 import string
 import random
-import traceback
 import datetime
-
 
 # Pull config
 config = toml.load("./config.toml")
@@ -109,6 +107,7 @@ async def on_ready():
             pass
         await asyncio.sleep(10)
 
+
 # On command error
 @bot.event
 async def on_command_error(ctx: commands.Context, error: commands.CommandError):
@@ -119,7 +118,8 @@ async def on_command_error(ctx: commands.Context, error: commands.CommandError):
 
     # Create a error file
     with open(f"./errors/{error_id}.txt", "w+") as error_file:
-        error_file.write(str(f"User: {ctx.author.id} | Time: {datetime.datetime.utcnow().strftime('%d/%m/%Y : %H:%M:%S')} | Server count: {len(bot.servers)} | User count: {len(bot.users)}\n" + error.__str__()))
+        error_file.write(
+            str(f"User: {ctx.author.id} | Time: {datetime.datetime.utcnow().strftime('%d/%m/%Y : %H:%M:%S')} | Server count: {len(bot.servers)} | User count: {len(bot.users)}\n" + error.__str__()))
 
     # Send the error message
     await ctx.reply(
@@ -129,6 +129,7 @@ async def on_command_error(ctx: commands.Context, error: commands.CommandError):
             color=guilded.Colour.dark_theme_embed(),
         )
     )
+
 
 # Run the bot
 bot.run(config["guilded"]["settings"]["token"])
