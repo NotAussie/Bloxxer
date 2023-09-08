@@ -1,0 +1,2 @@
+User: mj7xOkBA | Time: 08/09/2023 : 01:10:09 | Server count: 4 | User count: 5
+Command raised an exception: KeyError: 'settings'

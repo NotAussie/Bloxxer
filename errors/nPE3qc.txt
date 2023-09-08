@@ -1,0 +1,2 @@
+User: mj7xOkBA | Time: 08/09/2023, 01:08:55
+Command raised an exception: KeyError: 'settings'
