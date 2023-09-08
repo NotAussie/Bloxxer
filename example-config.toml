@@ -1,0 +1,17 @@
+[guilded]
+[guilded.settings] # Guilded settings.
+token = ""  # Token for the bot to sign in with.
+prefix = ""  # Prefix used to interact with the bot.
+support-server = ""  # Link to the support server.
+[guilded.settings.presence] # Presence settings.
+emotes = []  # Emotes to cycle through.
+statuses = []  # Statuses to cycle through.
+
+[roblox]
+[roblox.settings] # Roblox settings.
+token = ""  # Token for the bot to sign in with.
+
+[mongodb]
+[mongodb.settings] # MongoDB settings.
+uri = ""  # URI to connect to the MongoDB database.
+database = ""  # Name of the database to use.
